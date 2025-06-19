@@ -1,4 +1,4 @@
-name: Deploy to GitHub Pages
+name: 部署 GitHub Pages
 
 on:
   push:
@@ -14,9 +14,10 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: 18
+          cache: 'yarn'  # 缓存 yarn 依赖
 
       - name: Install Dependencies
-        run: yarn
+        run: yarn --frozen-lockfile  # 确保 lockfile 一致
 
       - name: Build
         run: yarn build
@@ -25,5 +26,5 @@ jobs:
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./dist  # 替换为你的构建目录
-          repository: ZNN-She/blog.github.io  # Add this line
+          publish_dir: ./dist  # 构建输出目录
+          # 如果不需要推送到其他仓库，移除 `repository` 参数
