@@ -31,4 +31,6 @@ jobs:
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./dist
-          publish_branch: gh-pages  # 指定目标分支为 gh-pages
+          destination_dir: ./docs   # 目标目录：将内容放入gh-pages分支的docs目录
+          publish_branch: gh-pages  # 目标分支
+          force_orphan: true        # 确保每次都是干净部署（可选）
