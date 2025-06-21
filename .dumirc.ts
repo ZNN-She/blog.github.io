@@ -3,6 +3,7 @@ import { defineConfig } from 'dumi';
 const year = new Date().getFullYear();
 
 export default defineConfig({
+  base: '/blog/',
   publicPath: '/blog/',          // 资源相对路径
   themeConfig: {
     name: '豆子',
