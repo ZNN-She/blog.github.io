@@ -9,10 +9,11 @@ export default defineConfig({
     name: '豆子',
     footer: `Copyright © ${year} | Powered by 豆子`,
     logo: 'https://github.githubassets.com/favicons/favicon.png',
+    // lastUpdated: true, // 启用最后更新时间 默认启动
     nav: [
       {
-        title: 'Python',
-        link: '/python',
+        title: 'github',
+        link: '/github/github-pages',
       },
     ],
   },
