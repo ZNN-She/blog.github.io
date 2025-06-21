@@ -5,7 +5,8 @@ order: 2
 
 # 结合Dumi构建博客
 
-* 使用方式请参考官方文档[Dumi](https://d.umijs.org/)，这里标注一些修改的配置，以及怎么部署到github pages
+* 使用方式请参考官方文档[Dumi](https://d.umijs.org/)，这里标注一些修改的配置，以及怎么部署到github pages。
+* 另外Dumi官方也提供了nopm工具包：[Dumi](https://d.umijs.org/guide/faq#%E9%83%A8%E7%BD%B2%E5%88%B0-github-pages)
 
 1. 使用github actions 进行部署
    1. 项目根目录创建.github/workflows/deploy.yml
